@@ -3,7 +3,7 @@ package cmd
 import (
 	"github.com/spf13/cobra"
 
-	helper "github.com/home-assistant/cli/client"
+	helper "github.com/clesyde/cli-4.29.0/client"
 )
 
 var resolutionIssueCmd = &cobra.Command{

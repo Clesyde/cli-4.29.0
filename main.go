@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/home-assistant/cli/cmd"
+	"github.com/clesyde/cli-4.29.0/cmd"
 	log "github.com/sirupsen/logrus"
 )
 

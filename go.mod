@@ -1,4 +1,4 @@
-module github.com/home-assistant/cli
+module github.com/clesyde/cli-4.29.0
 
 go 1.19
 

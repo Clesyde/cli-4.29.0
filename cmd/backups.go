@@ -5,7 +5,7 @@ import (
 	"os"
 	"strings"
 
-	helper "github.com/home-assistant/cli/client"
+	helper "github.com/clesyde/cli-4.29.0/client"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )

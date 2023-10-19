@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	helper "github.com/home-assistant/cli/client"
+	helper "github.com/clesyde/cli-4.29.0/client"
 	"github.com/spf13/cobra"
 )
 

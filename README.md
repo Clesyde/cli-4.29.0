@@ -75,7 +75,7 @@ add-on log, which is needed for further development.
 
 ### Get the source code
 
-Fork ([https://github.com/home-assistant/cli/fork](https://github.com/home-assistant/cli/fork)) or clone this repository.
+Fork ([https://github.com/clesyde/cli-4.29.0/fork](https://github.com/clesyde/cli-4.29.0/fork)) or clone this repository.
 
 ### Using it in development
 
@@ -97,7 +97,7 @@ CGO_ENABLED=0 go build -ldflags="-s -w" -o "ha"
 ```
 
 For details how we build cross for different architectures,
-please see our [build action file](https://github.com/home-assistant/cli/blob/master/.github/workflows/build.yml).
+please see our [build action file](https://github.com/clesyde/cli-4.29.0/blob/master/.github/workflows/build.yml).
 
 ### Contributing a change
 
