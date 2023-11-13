@@ -1,6 +1,6 @@
-# Home Assistant CLI
+# CLI
 
-Command line interface to facilitate interaction with the Home Assistant Supervisor.
+Command line interface to facilitate interaction with the Supervisor.
 
 ## Usage
 
@@ -16,9 +16,9 @@ E.g.:
 #### Global
 
 ```text
-      --api-token string   Home Assistant Supervisor API token
-      --config string      Optional config file (default is $HOME/.homeassistant.yaml)
-      --endpoint string    Endpoint for Home Assistant Supervisor (default is 'supervisor')
+      --api-token string   Supervisor API token
+      --config string      Optional config file 
+      --endpoint string    Endpoint for Supervisor (default is 'supervisor')
   -h, --help               help for ha
       --log-level string   Log level (defaults to Warn)
       --no-progress        Disable the progress spinner
@@ -32,30 +32,30 @@ All options are also available as `SUPERVISOR_` prefixed environment variables l
 Available commands:
 
 ```text
-  addons         Install, update, remove and configure Home Assistant add-ons
+  addons         Install, update, remove and configure add-ons
   audio          Audio device handling.
-  authentication Authentication for Home Assistant users.
-  cli            Get information, update or configure the Home Assistant cli backend
-  core           Provides control of the Home Assistant Core
-  dns            Get information, update or configure the Home Assistant DNS server
+  authentication Authentication for users.
+  cli            Get information, update or configure the cli backend
+  core           Provides control of the Core
+  dns            Get information, update or configure the DNS server
   docker         Docker backend specific for info and OCI configuration
   hardware       Provides hardware information about your system
   help           Help about any command
-  host           Control the host/system that Home Assistant is running on
-  info           Provides a general Home Assistant information overview
-  multicast      Get information, update or configure the Home Assistant Multicast
+  host           Control the host/system where the core is running on
+  info           Provides a general information overview
+  multicast      Get information, update or configure the Multicast
   network        Network specific for updating, info and configuration imports
-  observer       Get information, update or configure the Home Assistant observer
+  observer       Get information, update or configure the observer
   os             Operating System specific for updating, info and configuration imports
   resolution     Resolution center of Supervisor, show issues and suggest solutions
   backups        Create, restore and remove backups
-  supervisor     Monitor, control and configure the Home Assistant Supervisor
+  supervisor     Monitor, control and configure the Supervisor
 ```
 
 ## Installation
 
-The CLI is provided by the CLI container on Home Assistant systems and is
-available on the device terminal when using the Home Assistant Operating System.
+The CLI is provided by the CLI container on systems and is
+available on the device terminal when using the Operating System.
 
 The CLI is automatically updated on those systems.
 
@@ -63,47 +63,3 @@ Furthermore, the SSH add-on (available in the add-on store) provides
 access to this tool and several community add-ons provide it as well (e.g.,
 the Visual Studio Code add-on).
 
-## Developing & contributing
-
-### Prerequisites
-
-The CLI can interact remotely with the Home Assistant Supervisor using the
-`remote_api` add-on from the [developer add-ons repository](https://github.com/home-assistant/addons-development).
-
-After installing and starting the add-on, a token is shown in the `remote_api`
-add-on log, which is needed for further development.
-
-### Get the source code
-
-Fork ([https://github.com/clesyde/cli-4.29.0/fork](https://github.com/clesyde/cli-4.29.0/fork)) or clone this repository.
-
-### Using it in development
-
-```shell
-export SUPERVISOR_ENDPOINT=http://192.168.1.2
-export SUPERVISOR_API_TOKEN=replace_this_with_remote_api_token
-go run main.go info
-```
-
-**Note**: Replace the `192.168.1.2` with the IP address of your Home Assistant
-instance running the `remote_api` add-on and use the token provided.
-
-### Building
-
-We use go modules; an example build below:
-
-```bash
-CGO_ENABLED=0 go build -ldflags="-s -w" -o "ha"
-```
-
-For details how we build cross for different architectures,
-please see our [build action file](https://github.com/clesyde/cli-4.29.0/blob/master/.github/workflows/build.yml).
-
-### Contributing a change
-
-1. Create a feature branch on your fork/clone of the git repository.
-2. Commit your changes.
-3. Rebase your local changes against the `master` branch.
-4. Run test suite with the `go test ./...` command and confirm that it passes.
-5. Run `gofmt -s` to ensure your code is formatted properly.
-6. Create a new Pull Request.
